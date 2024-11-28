@@ -3,9 +3,6 @@
     header.header {
       position: relative;
 
-      .header__logo {
-      }
-
       .header__menu {
         &.menu {
           .menu__icon {
@@ -94,9 +91,6 @@
                   font-size: 30px;
                   line-height: 70px;
                   padding-left: 30px;
-
-                  &:hover {
-                  }
                 }
               }
             }
