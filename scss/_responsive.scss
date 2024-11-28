@@ -1,0 +1,108 @@
+@media (max-width: 768px) {
+  body {
+    header.header {
+      position: relative;
+
+      .header__logo {
+      }
+
+      .header__menu {
+        &.menu {
+          .menu__icon {
+            //   display: flex;
+            //   flex-direction: column;
+            //   align-items: center;
+            //   justify-content: space-between;
+
+            display: block;
+            width: 30px;
+            height: 18px;
+            position: relative;
+            z-index: 5;
+            cursor: pointer;
+
+            span {
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              background-color: #fff;
+              left: 0;
+              top: calc(50% - 1px); // -1 бо висота лінії 2px
+              transform: translateY(-2px);
+              transition: all 0.2s;
+
+              &:first-child {
+                top: 0;
+              }
+
+              &:last-child {
+                top: auto;
+                bottom: 0;
+              }
+            }
+
+            &.active {
+              span {
+                transform: scale(0);
+
+                &:first-child {
+                  transform: rotate(-45deg);
+                  top: calc(50% - 1px);
+                }
+
+                &:last-child {
+                  transform: rotate(45deg);
+                  top: calc(50% - 1px);
+                }
+              }
+            }
+          }
+
+          nav.menu__body {
+            position: absolute; // меню появиться з ліва або з верху
+            top: 0; // меню появиться з ліва або з права
+            left: -100%; // меню появиться з ліва
+            // position: fixed; //// меню появиться з права
+            // transform: translateX(100%); // меню появиться з права
+            // bottom: 100%; // меню появиться з верху
+            // left: 0; // меню появиться з верху
+
+            height: 100vh;
+            width: 100%;
+            // overflow: auto; // при  низькій висоті екрана, дозволить проскролити меню
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all 0.2s;
+            // display: flex;
+
+            /////////////////////////////
+            // align-items: center; // це шляпа, бо меню втікне у верх, коли буде зменшуватися висота екрану
+            // justify-content: center;
+
+            .menu__list {
+              display: flex;
+              flex-direction: column;
+              gap: 0;
+              //   margin: auto; // отак надо робить!! а в батька має бути display: flex;
+              height: 100%;
+              width: 60%;
+              background-color: #ff4f15;
+              overflow: auto;
+
+              .menu__item {
+                .menu__link {
+                  display: block;
+                  font-size: 30px;
+                  line-height: 70px;
+                  padding-left: 30px;
+
+                  &:hover {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

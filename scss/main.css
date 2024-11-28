@@ -1,0 +1,257 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body.lock {
+  overflow: hidden;
+}
+body header.header {
+  width: 100%;
+  padding: 20px 30px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header.header .header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  color: #000;
+  height: 50px;
+}
+body header.header .header__menu.menu .menu__icon {
+  display: none;
+}
+body header.header .header__menu.menu nav.menu__body.active {
+  left: 0;
+}
+body header.header .header__menu.menu nav.menu__body .menu__list {
+  display: flex;
+  gap: 30px;
+}
+body header.header .header__menu.menu nav.menu__body .menu__list .menu__item .menu__link {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+body header.header .header__menu.menu nav.menu__body .menu__list .menu__item .menu__link:hover {
+  text-decoration: underline;
+}
+body main section {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 50px;
+}
+body main section#about {
+  background-color: orange;
+}
+body main section#portfolio {
+  background-color: pink;
+}
+body main section#reviews {
+  background-color: aqua;
+}
+body main section#contacts {
+  background-color: teal;
+}
+body main section#subscribe {
+  background-color: coral;
+}
+body main section .title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body footer {
+  width: 100%;
+  height: 30vh;
+  font-size: 50px;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  body header.header {
+    position: relative;
+  }
+  body header.header .header__menu.menu .menu__icon {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+  body header.header .header__menu.menu .menu__icon span {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    top: calc(50% - 1px);
+    transform: translateY(-2px);
+    transition: all 0.2s;
+  }
+  body header.header .header__menu.menu .menu__icon span:first-child {
+    top: 0;
+  }
+  body header.header .header__menu.menu .menu__icon span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+  body header.header .header__menu.menu .menu__icon.active span {
+    transform: scale(0);
+  }
+  body header.header .header__menu.menu .menu__icon.active span:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  body header.header .header__menu.menu .menu__icon.active span:last-child {
+    transform: rotate(45deg);
+    top: calc(50% - 1px);
+  }
+  body header.header .header__menu.menu nav.menu__body {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+  }
+  body header.header .header__menu.menu nav.menu__body .menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    width: 60%;
+    background-color: #ff4f15;
+    overflow: auto;
+  }
+  body header.header .header__menu.menu nav.menu__body .menu__list .menu__item .menu__link {
+    display: block;
+    font-size: 30px;
+    line-height: 70px;
+    padding-left: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */
